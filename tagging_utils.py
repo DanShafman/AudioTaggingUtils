@@ -1,7 +1,7 @@
 from moviepy.editor import *
 
 def augment_clip(input_clip_filename, augment_audio_filename, output_filename, sound_level=1, aud_codec="aac"):
-    # str, str, float, str -> None
+    # str, str, str[, float, str] -> None
     input_clip = VideoFileClip(input_clip_filename)
     audio_clip_orig = input_clip.audio
     audio_clip_new = AudioFileClip(augment_audio_filename)
